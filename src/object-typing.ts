@@ -5,7 +5,7 @@ type UF = "PE" | "SP" | "MG";
 
 interface User {
   name: string;
-  address: {
+  address?: {
     city: string;
     uf: UF;
   };
@@ -16,10 +16,14 @@ function showCity(user: User) {
   // user.address.uf = "SP";
   user.say = () => console.log("Hello User!");
 
-  return user.address.city;
+  return user.address?.city;
 }
 
 // # object typing is also possible to pass in array or other variables
 let users: User[];
 
 // users[0].address.city # intellisense working
+
+// # as typescript you can also work with optional properties
+// # do you enter a ? before the attribute
+// # as was done in the example above in function showCity

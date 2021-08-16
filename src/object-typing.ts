@@ -63,3 +63,18 @@ class CreateVehicle implements Vehicle {
     console.log("speed");
   }
 }
+
+// # pick takes the functionality of an interface to create a new type
+// # omit omits the functionality of an interface to create a new type
+interface Post {
+  id: number;
+  title: string;
+  description: string;
+}
+
+// Pick && Omit
+type PostPreview = Pick<Post, "id" | "title">;
+type DescriptionPreview = Omit<Post, "id" | "title">;
+
+let post: PostPreview;
+let description: DescriptionPreview;

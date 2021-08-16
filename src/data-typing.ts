@@ -70,3 +70,9 @@ displayPet("cat");
 // # you can work with type inference, instead of informing the type of the variable in your creation, you can define only the value it will have, automatically the typescript will do the type inference
 let inference = "Gabriel";
 inference.toLocaleLowerCase(); // intellisense working
+
+// # it can happen at times, that we programmers know more than the typescript, and we need to say what type is the query we are doing, so we work with the type assertion
+// const input = document.querySelector('#name') # here it considers the type as Element, and does not have the value attribute.
+const input = document.querySelector("#name") as HTMLInputElement;
+
+console.log(input.value); // # here it is of type HTMLInputElement, and the value exists in its attributes

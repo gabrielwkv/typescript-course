@@ -26,4 +26,21 @@ function error(): never {
   throw new Error("Error");
 }
 
-error();
+// error();
+
+// # when you define an array, you need to type it
+let items: Array<number> = [1, 2, 3, 4, 5];
+// # but the most popular way of typing is this:
+let names: string[] = ["Gabriel"];
+// # tuples is when we already know the size of the array
+let tuple: [number, string, boolean] = [20, "Gabriel", true];
+// # enum we use similar to an object but store enumerated information
+// # enum applies for example to a form where you have selection fields, and you want to have pre-defined what will be written
+enum Colors {
+  white = "#FFFFFF",
+  black = "#000000",
+}
+
+let white: Colors = Colors.white;
+
+console.log(white);

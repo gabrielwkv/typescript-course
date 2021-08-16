@@ -57,3 +57,12 @@ function showPet(pet: "dog" | "cat"): void {
 }
 
 showPet("dog");
+
+// # suppose you need to pass the same type in different places, but don't want to repeat the code, you can resort to type aliases
+type Pet = "dog" | "cat";
+
+function displayPet(pet: Pet) {
+  console.log(pet);
+}
+
+displayPet("cat");

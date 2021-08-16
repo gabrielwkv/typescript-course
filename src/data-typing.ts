@@ -44,3 +44,16 @@ enum Colors {
 let white: Colors = Colors.white;
 
 console.log(white);
+
+// # we can use the concept of union, to say that a variable can be one or more values
+let age: number | string = 1;
+age = "one";
+
+console.log(age);
+
+// # the function argument must be dog or cat
+function showPet(pet: "dog" | "cat"): void {
+  console.log(pet);
+}
+
+showPet("dog");

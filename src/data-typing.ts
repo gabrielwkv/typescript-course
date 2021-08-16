@@ -66,3 +66,7 @@ function displayPet(pet: Pet) {
 }
 
 displayPet("cat");
+
+// # you can work with type inference, instead of informing the type of the variable in your creation, you can define only the value it will have, automatically the typescript will do the type inference
+let inference = "Gabriel";
+inference.toLocaleLowerCase(); // intellisense working
